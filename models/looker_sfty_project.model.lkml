@@ -14,7 +14,7 @@ explore: intloc_list {}
 
 explore: new_intloc_list {}
 
-explore: new_sub_list {}
+#explore: new_sub_list {}
 
 explore: service_alert_daily_mdr_by_period {}
 
@@ -37,3 +37,15 @@ explore: service_alert_new_first_party {}
 explore: service_alert_new_intloc {}
 
 explore: sub_list {}
+
+explore: new_sub_list {
+  label:"combinedsublist"
+  description: "Explore based on the service_alert_device_capture view."
+
+  join: service_alert_new_first_party {
+    relationship: many_to_one
+    sql_on: ${service_alert_new_first_party.subscriber_id} = ${new_sub_list.subscriber_id} ;;
+  }
+
+
+}
