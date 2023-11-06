@@ -15,7 +15,7 @@ include: "/views/*.view.lkml"                # include all views in the views/ f
 #
 #   join: users {
 #     relationship: many_to_one
-#     sql_on: ${users.id} = ${orders.user_id} ;;
+#     sql_on: ${users.id} = ${orders.user_id} ;
 #   }
 # }
 
