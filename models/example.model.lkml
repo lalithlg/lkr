@@ -18,6 +18,7 @@ view: service_alert_device_cap {
       column: stdd_txn_device_fp {}
       column: stdd_txn_device_tp {}
       column: week_cnt {}
+      derived_column: sum_avg_txn {sql: avg_txn / stdd_txn;;}
 
       filters: {
         field: service_alert_daily_mdr_by_period.is_before_act_time
