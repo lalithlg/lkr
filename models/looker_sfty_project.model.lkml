@@ -28,13 +28,15 @@ explore: service_alert_daily_mdr_txn {}
 
 explore: service_alert_daily_mdr_txn_int {}
 
+explore: service_alert_device_capture {}
+
 explore: service_alert_device_capture2 {
 #  join: service_alert_daily_mdr_today_int {
 #    type: left_outer
 #    relationship: one_to_many
 #  }
 hidden: no
-extends: [service_alert_device_capture2]
+extends: [service_alert_device_capture]
 }
 
   view: service_alert_device_capture2 {
