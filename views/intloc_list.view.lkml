@@ -25,7 +25,7 @@ view: intloc_list {
     type: string
     sql: ${TABLE}."INTLOC" ;;
   }
-  dimension_group: min_service {
+  dimension_group: min_service2 {
     type: time
     timeframes: [raw, time, date, week, month, quarter, year]
     sql: ${TABLE}."MIN_SERVICE_DATE" ;;
