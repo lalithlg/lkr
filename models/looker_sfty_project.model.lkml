@@ -28,9 +28,7 @@ explore: service_alert_daily_mdr_txn {}
 
 explore: service_alert_daily_mdr_txn_int {}
 
-#explore: service_alert_device_capture {}
-
-
+explore: service_alert_device_capture {}
 
 explore: service_alert_device_capture_int {}
 
