@@ -28,9 +28,9 @@ explore: service_alert_daily_mdr_txn {}
 
 explore: service_alert_daily_mdr_txn_int {}
 
-explore: service_alert_device_capture {}
+#explore: service_alert_device_capture {}
 
-explore: service_alert_device_capture2 {
+explore: service_alert_device_capture {
 #  join: service_alert_daily_mdr_today_int {
 #    type: left_outer
 #    relationship: one_to_many
@@ -39,33 +39,22 @@ hidden: no
 extends: [service_alert_device_capture]
 }
 
-  view: service_alert_device_capture2 {
-    derived_table: {
-      explore_source: service_alert_daily_mdr_by_period {
-        column: subscriber_id {}
-        column: sub_name {}
 
-        column: act_date_date {}
-        column: avg_txn {}
-        column: stdd_txn {}
-        column: avg_txn_device {}
-        column: avg_txn_device_fp {}
-        column: avg_txn_device_tp {}
-        column: stdd_txn_device {}
-        column: stdd_txn_device_fp {}
-        column: stdd_txn_device_tp {}
-        column: week_cnt {}
-
-      }
-    }
-
-
-}
 
 explore: service_alert_device_capture_int {}
 
 explore: service_alert_new_first_party {}
 
-explore: service_alert_new_intloc {}
-
 explore: sub_list {}
+
+explore: service_alert_new_intloc {
+  label: "Service Alert Device Capture 2"
+  description: "Explore based on the service_alert_device_capture view."
+
+  join: service_alert_device_capture {
+    relationship: many_to_many
+    sql_on: ${service_alert_device_capture.subscriber_id} = ${service_alert_new_intloc.subscriber_id} ;;
+  }
+
+
+}
