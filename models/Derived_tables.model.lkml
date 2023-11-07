@@ -39,3 +39,26 @@ explore: service_alert_daily_mdr_by_period {
   }
 
 }
+
+
+view: new_DT_service_alert_daily_mdr_by_period {
+  derived_table: {
+    explore_source: service_alert_daily_mdr_by_period {
+      column: subscriber_id {}
+      column: sub_name {}
+
+      column: act_date_date {}
+      column: avg_txn {}
+      column: stdd_txn {}
+      column: avg_txn_device {}
+      column: avg_txn_device_fp {}
+      column: avg_txn_device_tp {}
+      column: stdd_txn_device {}
+      column: stdd_txn_device_fp {}
+      column: stdd_txn_device_tp {}
+      column: week_cnt {}
+      column: sum_transactions {}
+      column: sigma_lbl {}
+      }
+    }
+  }
