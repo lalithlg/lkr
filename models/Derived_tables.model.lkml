@@ -58,7 +58,6 @@ view: new_DT_service_alert_daily_mdr_by_period {
       column: stdd_txn_device_tp {}
       column: week_cnt {}
       column: sum_transactions {}
-      column: sigma_lbl {}
       }
     }
   }
