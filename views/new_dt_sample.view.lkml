@@ -98,6 +98,7 @@ dimension: subscriber_id {
   }
   dimension: some_thing {
     type:number
+    label: "derived column something"
   }
 
 
