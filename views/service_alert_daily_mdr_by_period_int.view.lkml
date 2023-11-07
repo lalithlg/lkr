@@ -55,4 +55,26 @@ view: service_alert_daily_mdr_by_period_int {
     type: count
     drill_fields: [sub_name, integration_point_name, message_name]
   }
+  measure: week_cnt {
+    type: count
+  }
+  measure: avg_txn {
+    type: number
+    sql: ROUND(AVG(${sum_transactions}),0) ;;
+  }
+
+  measure: avg_txn_device {
+    type: number
+    sql: ROUND(AVG(${sum_device_transactions} / ${sum_transactions}),5) ;;
+  }
+
+  measure: stdd_txn {
+    type: number
+    sql: STDDEV(${sum_transactions}) ;;
+  }
+
+  measure: stdd_txn_device {
+    type: number
+    sql: ROUND(STDDEV(${sum_device_transactions} / ${sum_transactions}),5) ;;
+  }
 }
