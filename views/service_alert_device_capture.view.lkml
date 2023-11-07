@@ -145,6 +145,11 @@ view: service_alert_device_capture {
   dimension: week_cnt {
     type: number
     sql: ${TABLE}."WEEK_CNT" ;;
+    html: {% if value >= 0 %}
+    <b><p style="color: green;   text-align:right">{{ rendered_value }}</p></b>
+    {% else %}
+    <b><p style="color: red;   text-align:right">{{ rendered_value }}</p></b>
+    {% endif %} ;;
   }
   measure: count {
     type: count
