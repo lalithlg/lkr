@@ -33,4 +33,31 @@ view: service_alert_new_first_party {
     type: count
     drill_fields: [id]
   }
+  measure: current_transactions {
+    type: number
+    label: "Current Transaction Count"
+    sql: ${service_alert_device_capture.sum_transactions} ;;
+
+  }
+
+  measure: current_device_transactions {
+    type: number
+    label: "Current Device Transaction Count"
+    sql: ${service_alert_device_capture.sum_device_transactions} ;;
+
+  }
+
+  measure: current_fp_transactions {
+    type: number
+    label: "Current 1st Party Transaction Count"
+    sql: ${service_alert_device_capture.sum_fp_transactions} ;;
+
+  }
+
+  measure: current_tp_transactions {
+    type: number
+    label: "Current 3rd Party Transaction Count"
+    sql: ${service_alert_device_capture.sum_tp_transactions} ;;
+
+  }
   }
