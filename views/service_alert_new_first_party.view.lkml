@@ -33,4 +33,4 @@ view: service_alert_new_first_party {
     type: count
     drill_fields: [id]
   }
-}
+  }
