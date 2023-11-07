@@ -8,6 +8,7 @@ view: device_capture_summary {
       column: avg_txn {}
       column: subscriber_id {}
       column: count {}
+      derived_column: sum_device_rate {sql: avg_txn / subscriber_id;;}
       filters: {
         field: service_alert_device_capture_int.subscriber_id
         value: ""
