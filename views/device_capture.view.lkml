@@ -11,7 +11,6 @@ view: device_capture {
 
   measure: count {
     type: count
-    hidden: yes
     drill_fields: [detail*]
   }
 
@@ -28,6 +27,11 @@ view: device_capture {
   dimension: total_avg_txn {
     type: number
     sql: ${TABLE}."TOTAL_AVG_TXN" ;;
+  }
+  dimension: stdd_txn_device_tp {
+    hidden: yes
+    value_format_name: decimal_2
+    type: number
   }
 
   set: detail {
