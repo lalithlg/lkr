@@ -38,6 +38,11 @@ view: new_dt_sample {
       column: sum_transactions {
         field:service_alert_daily_mdr_by_period.sum_transactions
       }
+      derived_column: some_thing {
+        sql: row_number() over (order by sum_transactions desc) ;;
+      }
+
+
     }
   }
 
