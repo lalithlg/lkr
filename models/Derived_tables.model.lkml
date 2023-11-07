@@ -38,6 +38,4 @@ explore: service_alert_daily_mdr_by_period {
 
   }
 
-
-
 }
