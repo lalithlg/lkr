@@ -60,7 +60,7 @@ explore: service_alert_new_intloc {
 }
 
 explore: service_alert_new_first_party {
-  label: "Service Alert Device Capture 2"
+  label: "service_alert_new_first_party"
   description: "Explore based on the service_alert_device_capture view."
 
   join: service_alert_device_capture {
