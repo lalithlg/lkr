@@ -96,7 +96,9 @@ dimension: subscriber_id {
     type: number
     sql: ${TABLE}."SUM_TRANSACTIONS" ;;
   }
-
+  dimension: some_thing {
+    type:number
+  }
 
 
 }
