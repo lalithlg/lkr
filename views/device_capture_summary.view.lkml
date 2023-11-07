@@ -34,4 +34,10 @@ view: device_capture_summary {
     description: ""
     type: number
   }
+  measure: STDD_TXN_DEVICE_LB {
+    type: sum
+  }
+  measure: AVG_TXN_DEVICE {
+    type:  count
+  }
 }
