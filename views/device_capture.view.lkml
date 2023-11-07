@@ -29,7 +29,6 @@ view: device_capture {
     sql: ${TABLE}."TOTAL_AVG_TXN" ;;
   }
   dimension: stdd_txn_device_tp {
-    hidden: yes
     value_format_name: decimal_2
     type: number
   }
