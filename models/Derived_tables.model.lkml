@@ -36,3 +36,5 @@ explore: service_alert_daily_mdr_today {
 explore: new_dt_service_alert_daily_mdr_today {
   hidden: no
 }
+
+explore: new_sql_dt_from__service_alert_new_intloc {}
