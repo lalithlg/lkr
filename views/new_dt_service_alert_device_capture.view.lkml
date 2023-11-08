@@ -28,10 +28,7 @@ view: new_dt_service_alert_device_capture {
     timeframes: [raw, date]
     sql: ${TABLE}.act_date_date ;;
   }
-  dimension: sum_tp_transactions_raw {
-    type: number
-    sql: ${today.sum_tp_transactions} ;;
-  }
+
   measure: week_cnt {
     type: count
   }

@@ -40,3 +40,6 @@ explore: new_dt_service_alert_daily_mdr_today {
 explore: service_alert_device_capture {
   hidden: no
 }
+explore: new_dt_service_alert_device_capture {
+  hidden: no
+    }
