@@ -103,4 +103,57 @@ view: service_alert_daily_mdr_by_period {
     type: count
     drill_fields: [sub_name, integration_point_name, message_name]
   }
+  measure: week_cnt_1 {
+    type: count
+  }
+  measure: avg_txn_1 {
+    type: number
+    sql: ROUND(AVG(${sum_transactions}),0) ;;
+  }
+
+  measure: avg_txn_device_1 {
+    type: number
+    sql: ROUND(AVG(${sum_device_transactions} / ${sum_transactions}),5) ;;
+  }
+
+  measure: avg_txn_device_fp_1 {
+    type: number
+    sql: ROUND(AVG(${sum_fp_transactions} / ${sum_transactions}),5) ;;
+  }
+
+  measure: avg_txn_device_tp_1 {
+    type: number
+    sql: ROUND(AVG(${sum_tp_transactions} / ${sum_transactions}),5) ;;
+  }
+
+  measure: stdd_txn_1 {
+    type: number
+    sql: STDDEV(${sum_transactions}) ;;
+  }
+
+  measure: stdd_txn_fp_1 {
+    type: number
+    sql: STDDEV(${sum_fp_transactions}) ;;
+  }
+
+  measure: stdd_txn_tp_1 {
+    type: number
+    sql: STDDEV(${sum_tp_transactions}) ;;
+  }
+
+  measure: stdd_txn_device_1 {
+    type: number
+    sql: ROUND(STDDEV(${sum_device_transactions} / ${sum_transactions}),5) ;;
+  }
+
+  measure: stdd_txn_device_fp_1 {
+    type: number
+    sql: ROUND(STDDEV(${sum_fp_transactions} / ${sum_transactions}),5) ;;
+  }
+
+  measure: stdd_txn_device_tp_1 {
+    type: number
+    sql: ROUND(STDDEV(${sum_tp_transactions} / ${sum_transactions}),5) ;;
+  }
+
 }
