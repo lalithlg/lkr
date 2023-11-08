@@ -29,10 +29,6 @@ view: service_alert_new_first_party {
     type: number
     sql: ${TABLE}."SUBSCRIBER_ID" ;;
   }
-  dimension: FIRST_SEEN_DATE {
-    type: yesno
-    sql: CASE WHEN CONCAT(${TABLE}."fields", '"fields":') LIKE '%FIRST_SEEN_DATE%' THEN 'Yes' ELSE 'No' END ;
-  }
   measure: count {
     type: count
     drill_fields: [id]
