@@ -37,4 +37,21 @@ view: service_alert_new_intloc {
     type: count
     drill_fields: [id]
   }
+  measure: total_intloc_count {
+    type: count_distinct
+    label: "Total Intloc Count"
+    sql: ${TABLE}."INTLOC" ;;
+  }
+
+  measure: new_intloc_count {
+    type: count_distinct
+    label: "New Intloc Count"
+    sql: CASE WHEN ${TABLE}."IS_NEW" = 'Yes' THEN 1 ELSE 0 END ;;
+  }
+
+  measure: distinct_subscribr_count {
+    type: count_distinct
+    label: "Distinct Subscriber Count"
+    sql: ${TABLE}."SUBSCRIBER_ID" ;;
+  }
 }
