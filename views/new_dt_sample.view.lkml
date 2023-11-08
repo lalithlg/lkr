@@ -100,6 +100,4 @@ dimension: subscriber_id {
     type:number
     label: "derived column something"
   }
-
-
 }
