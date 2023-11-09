@@ -100,6 +100,10 @@ view: service_alert_daily_mdr_by_period {
     sql: ${TABLE}."WEEK_CNT" ;;
 
   }
+  dimension: subint {
+    sql: ${TABLE}.subint ;;
+    drill_fields: [sub_name, integration_point_name]
+  }
   dimension: concatenated_name {
     type: string
     sql: CONCAT(${TABLE}."SUB_NAME", ' - ', ${TABLE}."INTEGRATION_POINT_NAME") ;;
