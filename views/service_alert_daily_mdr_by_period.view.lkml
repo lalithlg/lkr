@@ -107,7 +107,10 @@ view: service_alert_daily_mdr_by_period {
 
   measure: count {
     type: count
-    drill_fields: [sub_name, integration_point_name, message_name]
+    drill_fields: [user_details*]
+  }
+  set: user_details {
+    fields: [sub_name, integration_point_name, message_name]
   }
   measure: week_cnt_1 {
     type: count
