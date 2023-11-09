@@ -102,7 +102,7 @@ view: service_alert_daily_mdr_by_period {
   }
   dimension: concatenated_name {
     type: string
-    sql: CONCAT(${TABLE}."SUB_NAME", ' + ', ${TABLE}."INTEGRATION_POINT_NAME") ;;
+    sql: CONCAT(${TABLE}."SUB_NAME", ' - ', ${TABLE}."INTEGRATION_POINT_NAME") ;;
   }
 
   measure: count {
