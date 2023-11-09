@@ -66,6 +66,7 @@ view: service_alert_daily_mdr_by_period {
   dimension: subscriber_id {
     type: number
     sql: ${TABLE}."SUBSCRIBER_ID" ;;
+    drill_fields: [sub_name, integration_point_name]
   }
   dimension: sum_device_rate {
     type: number
@@ -99,10 +100,6 @@ view: service_alert_daily_mdr_by_period {
     type: number
     sql: ${TABLE}."WEEK_CNT" ;;
 
-  }
-  dimension: subint {
-    sql: ${TABLE}.subint ;;
-    drill_fields: [sub_name, integration_point_name]
   }
   dimension: concatenated_name {
     type: string
