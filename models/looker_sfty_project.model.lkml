@@ -18,3 +18,15 @@ explore: service_alert_device_capture_int {
     relationship: many_to_one
   }
 }
+
+explore: service_alert_daily_mdr_by_period_int {
+  label: "Conditions"
+  from: service_alert_daily_mdr_by_period_int
+  sql_always_having: ${service_alert_daily_mdr_by_period_int.sum_transactions} > 0;;
+
+  join: service_alert_daily_mdr_by_period {
+    from: service_alert_daily_mdr_by_period_int
+    sql_on: ${service_alert_daily_mdr_by_period.subscriber_id}} = ${service_alert_daily_mdr_by_period_int.subscriber_id};;
+    relationship: many_to_one
+  }
+}

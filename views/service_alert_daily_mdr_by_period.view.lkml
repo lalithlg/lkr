@@ -161,5 +161,4 @@ view: service_alert_daily_mdr_by_period {
     type: number
     sql: ROUND(STDDEV(${sum_tp_transactions} / ${sum_transactions}),5) ;;
   }
-
 }
