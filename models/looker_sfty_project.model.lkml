@@ -26,7 +26,7 @@ explore: service_alert_daily_mdr_by_period_int {
 
   join: service_alert_daily_mdr_by_period {
     from: service_alert_daily_mdr_by_period_int
-    sql_on: ${service_alert_daily_mdr_by_period.subscriber_id}} = ${service_alert_daily_mdr_by_period_int.subscriber_id};;
+    sql_on: ${service_alert_daily_mdr_by_period.subscriber_id} = ${service_alert_daily_mdr_by_period_int.subscriber_id};;
     relationship: many_to_one
   }
 }
