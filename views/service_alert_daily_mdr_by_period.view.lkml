@@ -98,7 +98,13 @@ view: service_alert_daily_mdr_by_period {
   dimension: week_cnt {
     type: number
     sql: ${TABLE}."WEEK_CNT" ;;
+
   }
+  dimension: concatenated_name {
+    type: string
+    sql: CONCAT(${TABLE}."SUB_NAME", ' - ', ${TABLE}."INTEGRATION_POINT_NAME") ;;
+  }
+
   measure: count {
     type: count
     drill_fields: [sub_name, integration_point_name, message_name]
