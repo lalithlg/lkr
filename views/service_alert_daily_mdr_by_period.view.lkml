@@ -1,5 +1,5 @@
 view: service_alert_daily_mdr_by_period {
-  drill_fields: [subscriber_id,sub_name]
+  drill_fields: [sub_name,integration_point_name]
   sql_table_name: "PUBLIC"."SERVICE_ALERT_DAILY_MDR_BY_PERIOD" ;;
 
   dimension_group: act_date {
