@@ -46,7 +46,7 @@ view: service_alert_new_intloc {
   measure: new_intloc_count {
     type: count_distinct
     label: "New Intloc Count"
-    sql: CASE WHEN ${TABLE}."IS_NEW" = 'Yes' THEN 1 ELSE 0 END ;;
+    sql:  ${TABLE}."IS_NEW" ;;
   }
 
   measure: distinct_subscribr_count {
