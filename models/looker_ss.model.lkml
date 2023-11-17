@@ -39,7 +39,12 @@ hidden: no
 extends: [service_alert_device_capture]
 }
 
-
+explore: Constraints_Pk {
+  hidden: no
+}
+explore: all_constraints {
+  hidden: no
+}
 
 explore: service_alert_device_capture_int {}
 
