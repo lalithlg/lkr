@@ -33,6 +33,9 @@ view: service_alert_new_intloc {
     type: number
     sql: ${TABLE}."SUBSCRIBER_ID" ;;
   }
+  dimension: name {
+    type: string
+  }
   measure: count {
     type: count
     drill_fields: [id]
